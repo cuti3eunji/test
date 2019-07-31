@@ -14,6 +14,8 @@ public class HelloWorldServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=utf-8");
+		
 		PrintWriter pw = resp.getWriter();
 		
 		Date date = new Date();
@@ -22,7 +24,7 @@ public class HelloWorldServlet extends HttpServlet{
 		
 		pw.println("<html>");
 		pw.println("	<body>");
-		pw.println("		<h1>hello, today : " + today + "</h1>");
+		pw.println("		<h1>hello, today : " + today  + "</h1>");
 		pw.println("	</body>");
 		pw.println("</html>");
 	}
